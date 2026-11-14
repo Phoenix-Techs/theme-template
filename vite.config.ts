@@ -17,6 +17,14 @@ export default defineConfig(async () => ({
       filename: 'dist/stats.html',
     }),
   ],
+  server: {
+    // BannAi preview: the proxy sends Host as localhost, and the browser loads
+    // the theme from <slug>.bannaipreview.com (HMR connects there too).
+    allowedHosts: ['.bannaipreview.com'],
+    // The builder's agent edits files in steps, and a step in between may not
+    // compile. Without the overlay a failed update keeps the last working page.
+    hmr: { overlay: false },
+  },
   resolve: {
     alias: [
       // Swiper's stylesheets otherwise land in a per-chunk CSS file that the
