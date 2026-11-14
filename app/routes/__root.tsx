@@ -19,7 +19,11 @@ import productCriticalCss from '../styles/critical-product.scss?inline';
 // Dev-only: reads the theme's local twilight.json (settings + components),
 // fills defaults, and lets you edit them live. Imported from the engine's `/dev`
 // subpath under an import.meta.env.DEV gate so it is tree-shaken from prod builds.
-const DevSettingsWidget = import.meta.env.DEV
+// BannAi's preview (VITE_BANNAI_PREVIEW, set by its theme image) shows the
+// theme as a shopper sees it: no dev tools there.
+const DEV_TOOLS = import.meta.env.DEV && !import.meta.env.VITE_BANNAI_PREVIEW;
+
+const DevSettingsWidget = DEV_TOOLS
   ? lazy(() =>
       import('@salla.sa/twilight-theme-engine/dev').then((m) => ({ default: m.DevSettingsWidget }))
     )
@@ -63,7 +67,7 @@ function RootComponent() {
         >
           <Outlet />
         </TwilightProvider>
-        <TanStackRouterDevtools position="bottom-right" />
+        {DEV_TOOLS && <TanStackRouterDevtools position="bottom-right" />}
         {DevSettingsWidget && (
           <Suspense fallback={null}>
             <DevSettingsWidget schema={devSchema} />
