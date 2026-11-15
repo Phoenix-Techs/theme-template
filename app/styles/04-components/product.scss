@@ -612,7 +612,7 @@ salla-gifting {
   @apply justify-start gap-2.5;
 
   h4 {
-    @apply text-red-800;
+    color: var(--color-sale);
   }
 }
 
@@ -922,7 +922,7 @@ salla-gifting {
 
 .s-product-card-sale-price {
   h4 {
-    @apply text-red-800 #{!important};
+    color: var(--color-sale) #{!important};
   }
 
   span {

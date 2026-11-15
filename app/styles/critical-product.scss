@@ -5,6 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './01-settings/tokens';
 @import './01-settings/global';
 @import './01-settings/breakpoints';
 
@@ -41,6 +42,9 @@
 
 body {
   font-family: var(--font-main);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 html {

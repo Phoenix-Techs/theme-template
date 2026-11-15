@@ -41,6 +41,9 @@ module.exports = {
       gridTemplateColumns: {
         'auto-fill': 'repeat(auto-fill, 290px)',
       },
+      borderColor: {
+        DEFAULT: 'var(--color-border)',
+      },
       colors: {
         dark: '#1D1F1F',
         darker: '#0E0F0F',
