@@ -1125,3 +1125,28 @@ body.topnav-is-dark .site-header--lite .site-header__bar {
 .site-header__mainmenu {
   @apply hidden;
 }
+
+/* BannAi's isolated component preview (`app/routes/preview-component.tsx`) shows
+   a header alone on a page that is not home, where phones collapse its bar (the
+   rules above). Inside the preview wrapper the bar stays, so the header can be
+   seen at any frame width. Nothing outside that route carries the attribute. */
+[data-preview-status] .site-header:not(.site-header--home) {
+  .site-header__ad,
+  .site-header__intro {
+    display: revert;
+  }
+
+  .site-header__bar-outer {
+    min-height: 72px;
+  }
+
+  .site-header__bar {
+    height: auto;
+    overflow: visible;
+    visibility: visible;
+  }
+
+  .site-header__nav-toggle button {
+    display: inline-flex;
+  }
+}
