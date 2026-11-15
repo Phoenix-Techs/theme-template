@@ -1,0 +1,372 @@
+{
+  "v": 1,
+  "components": [
+    {
+      "id": "header",
+      "name": {
+        "ar": "الترويسة",
+        "en": "Header"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/layout/Header.tsx",
+        "app/components/layout/HeaderMainMenu.tsx",
+        "app/components/layout/HeaderNav.tsx",
+        "app/components/layout/HeaderTopnav.tsx",
+        "app/styles/04-components/header.scss",
+        "app/styles/04-components/menus.scss"
+      ],
+      "placement": {
+        "kind": "global",
+        "key": "header"
+      },
+      "reads": [
+        "header_layout",
+        "enable_more_menu",
+        "header_show_store_info",
+        "header_store_info_home_only",
+        "header_is_sticky",
+        "important_links"
+      ],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "footer",
+      "name": {
+        "ar": "التذييل",
+        "en": "Footer"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/layout/Footer.tsx",
+        "app/styles/04-components/footer.scss",
+        "app/styles/04-components/social.scss"
+      ],
+      "placement": {
+        "kind": "global",
+        "key": "footer"
+      },
+      "reads": [
+        "important_links",
+        "footer_is_dark"
+      ],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "mobile-bottom-bar",
+      "name": {
+        "ar": "شريط الجوال السفلي",
+        "en": "Mobile bottom bar"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/layout/MobileBottomBar.tsx",
+        "app/styles/04-components/mobile-bottom-bar.scss"
+      ],
+      "placement": {
+        "kind": "global",
+        "key": "mobile-bottom-bar"
+      },
+      "reads": [],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "product-card",
+      "name": {
+        "ar": "بطاقة المنتج",
+        "en": "Product card"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/product/ProductCard.tsx",
+        "app/components/product/WishlistHeartButton.tsx"
+      ],
+      "placement": {
+        "kind": "registry",
+        "key": "product:card"
+      },
+      "reads": [],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "product-list-page",
+      "name": {
+        "ar": "صفحة قائمة المنتجات",
+        "en": "Product list page"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/product/ProductListPage.tsx",
+        "app/components/product/ProductListSkeleton.tsx",
+        "app/styles/04-components/product-list.scss"
+      ],
+      "placement": {
+        "kind": "registry",
+        "key": "product:list-page"
+      },
+      "reads": [
+        "product_index_show_breadcrumbs"
+      ],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "product-page",
+      "name": {
+        "ar": "صفحة المنتج",
+        "en": "Product page"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/product/ProductPage.tsx",
+        "app/components/product/ProductDetails.tsx",
+        "app/components/product/ProductGallery.tsx",
+        "app/components/product/AddToCartForm.tsx",
+        "app/styles/04-components/product.scss"
+      ],
+      "placement": {
+        "kind": "global",
+        "key": "product-page"
+      },
+      "reads": [
+        "product_show_breadcrumbs",
+        "sticky_add_to_cart",
+        "show_tags",
+        "slider_background_size"
+      ],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "cart-page",
+      "name": {
+        "ar": "صفحة السلة",
+        "en": "Cart page"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/cart/CartPage.tsx",
+        "app/components/cart/CartItem.tsx",
+        "app/styles/04-components/cart.scss"
+      ],
+      "placement": {
+        "kind": "global",
+        "key": "cart-page"
+      },
+      "reads": [],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "home-featured-products",
+      "name": {
+        "ar": "منتجات مميزة",
+        "en": "Featured products"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/home/FeaturedProducts.tsx"
+      ],
+      "placement": {
+        "kind": "home-block",
+        "key": "featured-products"
+      },
+      "reads": [
+        "product_card_layout"
+      ],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "home-fixed-products",
+      "name": {
+        "ar": "منتجات ثابتة",
+        "en": "Fixed products"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/home/FixedProducts.tsx"
+      ],
+      "placement": {
+        "kind": "home-block",
+        "key": "fixed-products"
+      },
+      "reads": [
+        "vertical_fixed_products"
+      ],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "home-latest-products",
+      "name": {
+        "ar": "أحدث المنتجات",
+        "en": "Latest products"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/home/LatestProducts.tsx"
+      ],
+      "placement": {
+        "kind": "home-block",
+        "key": "latest-products"
+      },
+      "reads": [],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "home-products-slider",
+      "name": {
+        "ar": "شريط منتجات",
+        "en": "Products slider"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/home/ProductsSlider.tsx",
+        "app/styles/04-components/slider.scss"
+      ],
+      "placement": {
+        "kind": "home-block",
+        "key": "products-slider"
+      },
+      "reads": [
+        "product_card_layout"
+      ],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "home-photos-slider",
+      "name": {
+        "ar": "شريط صور",
+        "en": "Photos slider"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/home/PhotosSlider.tsx"
+      ],
+      "placement": {
+        "kind": "home-block",
+        "key": "photos-slider"
+      },
+      "reads": [],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "home-main-links",
+      "name": {
+        "ar": "روابط رئيسية",
+        "en": "Main links"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/home/MainLinks.tsx"
+      ],
+      "placement": {
+        "kind": "home-block",
+        "key": "main-links"
+      },
+      "reads": [],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "home-brands",
+      "name": {
+        "ar": "الماركات",
+        "en": "Brands"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/home/Brands.tsx",
+        "app/styles/04-components/brands.scss"
+      ],
+      "placement": {
+        "kind": "home-block",
+        "key": "brands"
+      },
+      "reads": [
+        "is_more_button_enabled"
+      ],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "home-testimonials",
+      "name": {
+        "ar": "آراء العملاء",
+        "en": "Testimonials"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/home/CustomTestimonials.tsx"
+      ],
+      "placement": {
+        "kind": "home-block",
+        "key": "custom-testimonials"
+      },
+      "reads": [],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "home-square-banners",
+      "name": {
+        "ar": "بنرات مربعة",
+        "en": "Square banners"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/home/EnhancedSquareBanners.tsx"
+      ],
+      "placement": {
+        "kind": "home-block",
+        "key": "enhanced-square-banners"
+      },
+      "reads": [],
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "id": "home-blog",
+      "name": {
+        "ar": "المدونة",
+        "en": "Blog"
+      },
+      "origin": "ready",
+      "files": [
+        "app/components/home/Blog.tsx"
+      ],
+      "placement": {
+        "kind": "home-block",
+        "key": "blog"
+      },
+      "reads": [],
+      "states": [
+        "normal"
+      ]
+    }
+  ]
+}

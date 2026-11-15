@@ -47,6 +47,11 @@ module.exports = {
         danger: '#AE0A0A',
         primary: 'var(--color-primary)',
         'primary-dark': 'var(--color-primary-dark)',
+        bg: 'var(--color-bg)',
+        sale: 'var(--color-sale)',
+        success: 'var(--color-success)',
+        warning: 'var(--color-warning)',
+        error: 'var(--color-error)',
       },
       spacing: {
         3.75: '15px',
@@ -62,7 +67,7 @@ module.exports = {
         large: '22px',
         big: '40px',
         tiny: '3px',
-        DEFAULT: '16px',
+        DEFAULT: 'var(--radius-card)',
       },
       fontSize: {
         'icon-lg': '33px',

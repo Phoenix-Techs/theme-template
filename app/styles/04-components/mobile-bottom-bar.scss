@@ -11,7 +11,7 @@
   --mbb-badge-text: #ffffff;
   /* Inactive icons read near-black in the design; nudge the theme text colour
      darker rather than hard-coding so a light-on-dark theme still works. */
-  --mbb-muted: color-mix(in srgb, var(--color-text, #7c8082) 55%, #000 45%);
+  --mbb-muted: color-mix(in srgb, var(--color-text-secondary, #7c8082) 55%, #000 45%);
 
   /* Above every overlay — the nav side panel (z-200), bottom sheets and the
      user-menu sheet (z-210). Those panels pad their own bottoms to clear it. */

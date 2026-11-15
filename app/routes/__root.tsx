@@ -42,7 +42,12 @@ const CRITICAL_CSS = {
 function RootComponent() {
   const ctx = getTwilightContext();
   return (
-    <html lang={ctx.locale} dir={ctx.dir} suppressHydrationWarning>
+    <html
+      lang={ctx.locale}
+      dir={ctx.dir}
+      data-bannai-preview={import.meta.env.VITE_BANNAI_PREVIEW ? '' : undefined}
+      suppressHydrationWarning
+    >
       <head>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

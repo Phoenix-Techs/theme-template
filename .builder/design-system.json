@@ -1,0 +1,40 @@
+{
+  "v": 1,
+  "font": {
+    "family": "Tajawal",
+    "sizes": {
+      "headingLarge": 32,
+      "heading": 22,
+      "body": 16,
+      "small": 13
+    }
+  },
+  "spacing": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32
+  ],
+  "primary": "#2a5a3c",
+  "colors": {
+    "background": "#ffffff",
+    "text": "#111111",
+    "textSecondary": "#666666",
+    "border": "#e2e2e2",
+    "sale": "#c62828",
+    "success": "#1a7f37",
+    "warning": "#b58900",
+    "error": "#d1242f"
+  },
+  "radii": {
+    "button": 6,
+    "card": 8,
+    "badge": 4
+  },
+  "shadows": {
+    "sm": "0 1px 2px #0000001a",
+    "md": "0 4px 12px #0000001f"
+  }
+}
