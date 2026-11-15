@@ -117,7 +117,8 @@
       ],
       "states": [
         "normal"
-      ]
+      ],
+      "preview": "none"
     },
     {
       "id": "product-page",
@@ -145,7 +146,8 @@
       ],
       "states": [
         "normal"
-      ]
+      ],
+      "preview": "none"
     },
     {
       "id": "cart-page",
@@ -166,7 +168,8 @@
       "reads": [],
       "states": [
         "normal"
-      ]
+      ],
+      "preview": "none"
     },
     {
       "id": "home-featured-products",

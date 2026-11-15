@@ -32,6 +32,16 @@ function PreviewComponent() {
   const { state } = Route.useSearch();
   const [loaded, setLoaded] = useState<Loaded>(null);
 
+  // The builder shows "Create sample" over the frame when none exists, so it is told.
+  useEffect(() => {
+    if (loaded !== null) {
+      window.parent?.postMessage(
+        { type: 'bannai:component-preview', id, status: loaded === 'missing' ? 'missing' : 'ready' },
+        '*'
+      );
+    }
+  }, [id, loaded]);
+
   useEffect(() => {
     const load = samples[`../preview/samples/${id}.tsx`];
     if (!load) {
@@ -46,7 +56,8 @@ function PreviewComponent() {
     return () => {
       live = false;
     };
-  }, [id]);
+    // `samples` changes when a sample file is added or removed (HMR): look again.
+  }, [id, samples]);
 
   if (loaded === null) {
     return <div className="p-6" data-preview-status="loading" />;
